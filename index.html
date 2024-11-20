@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>夏小姐，我心属于你。</title>
+<style>
+  body, html {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    background: #000;
+    overflow: hidden;
+  }
+  
+  .confession {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .confession h1 {
+    color: #333;
+  }
+  
+  .confession p {
+    color: #666;
+  }
+  
+  .confession button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6495ED;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  .confession button:hover {
+    background-color: #5C85D6;
+  }
+  
+  .star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: white;
+    border-radius: 50%;
+    animation: moveAndTwinkle 10s linear infinite;
+  }
+  
+  @keyframes moveAndTwinkle {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: translate(20px, -20px) scale(0.5);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translate(40px, 40px) scale(1);
+      opacity: 1;
+    }
+  }
+</style>
+</head>
+<body onload="generateStars(100)">
+<div class="confession">
+  <h1>夏欣媛，我有话对你说</h1>
+  <p>在茫茫人海中，我找到了你，</p>
+  <p>你的笑容如同阳光，温暖了我的心房，</p>
+  <p>你的眼眸如同星辰，照亮了我的夜空。</p>
+  <p>我想对你说，</p>
+  <p>我喜欢你，</p>
+  <p>不仅仅是喜欢，</p>
+  <p>是深深的，无法用言语表达的喜欢。</p>
+  <button onclick="confessLove()">点击这里，我笔下的诗，为你而生。</button>
+</div>
+
+<script>
+function generateStars(num) {
+  for (let i = 0; i < num; i++) {
+    let star = document.createElement('div');
+    star.className = 'star';
+    star.style.left = Math.random() * window.innerWidth + 'px';
+    star.style.top = Math.random() * window.innerHeight + 'px';
+    document.body.appendChild(star);
+  }
+}
+
+function confessLove() {
+  alert('携手漫步尘世路，共赏山河四季舞。\n晨光中迎接新生，夕阳下细数流年。\n人间冷暖共承担，白首不离誓言坚。\n月光下许永恒愿，星光下织梦无边。\n岁月长河情不息，白发苍苍手相牵。\n爱如细水长流，\n诗篇永恒，心相连。');
+}
+</script>
+</body>
+</html>
